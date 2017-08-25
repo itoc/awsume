@@ -1,6 +1,6 @@
 from __future__ import print_function
 import sys, os
-import re, argparse, collections, datetime, dateutil, boto3, psutil, logging, json
+import re, argparse, collections, datetime, dateutil, boto3, logging, json
 from six.moves import configparser as ConfigParser
 from builtins import input
 from yapsy import PluginManager
@@ -668,17 +668,17 @@ def kill_all_auto_processes():
     """
     log.info('Killing all autoAwsume processes')
 
-    for proc in psutil.process_iter():
-        try:
-            #kill the autoAwsume process if no more auto-refresh profiles remain
-            process_command = proc.cmdline()
-            for command_string in process_command:
-                if 'autoAwsume' in command_string:
-                    log.debug('Found an autoAwsume process, killing it')
-                    #the profile and default_profile environment variables
-                    proc.kill()
-        except Exception:
-            pass
+#    for proc in psutil.process_iter():
+#        try:
+#            #kill the autoAwsume process if no more auto-refresh profiles remain
+#            process_command = proc.cmdline()
+#            for command_string in process_command:
+#                if 'autoAwsume' in command_string:
+#                    log.debug('Found an autoAwsume process, killing it')
+#                    #the profile and default_profile environment variables
+#                    proc.kill()
+#        except Exception:
+#            pass
 
 def remove_all_auto_profiles(filePath):
     """

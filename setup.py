@@ -77,7 +77,6 @@ setup(
     install_requires=[
         'python-dateutil',
         'boto3',
-        'psutil',
         'yapsy',
         'future'
     ],
