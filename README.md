@@ -177,6 +177,24 @@ Removes the `auto-refresh-client1-admin` profile from the `.aws/credentials` fil
 `awsume -k`
 Removes all `auto-refresh-` profiles from the `.aws/credentials` file, and kills the auto-refreshing background process.
 
+
+#### Cygwin Example
+
+Values are obfuscated
+
+```
+$ awsume  osssio-qldonline
+Enter MFA Code: <obfuscated>
+User profile credentials will expire: 2017-08-25 23:09:07+10:00
+Role profile credentials will expire: 2017-08-25 12:09:09+10:00
+
+$ env|grep AWS
+AWS_SECRET_ACCESS_KEY=<obfuscated>
+AWS_SESSION_TOKEN=<obfuscated>
+AWS_ACCESS_KEY_ID=<obfuscated>
+AWS_SECURITY_TOKEN=<obfuscated>
+```
+
 #### NOTES
 
 - Only use the `awsume [profile] -k` option to stop the background process, do not run a `kill` command or terminate the process yourself without AWSume.
