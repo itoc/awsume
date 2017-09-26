@@ -1,5 +1,13 @@
 # AWSume Changelog
 
+## [1.2.6] - 2017-09-14 - Bug Fix
+
+- Fixes logging bug that causes an error when killing autoAwsume
+
+## [1.2.5] - 2017-09-06 - Bug Fix
+
+- Fixes issue where awsuming with command prompt would not set environment variables.
+
 ## [1.2.4] - 2017-08-18 - Logging
 
 - Adds two new command-line options: `--info` and `--debug`, both used for logging purposes.
